@@ -1,14 +1,8 @@
-import {RequireAuth} from './components/RequireAuth';
+import RequireAuth from './components/RequireAuth';
 import { Routes, Route } from 'react-router-dom';
 
-const ROLES = {
-  'User': 2001,
-  'Editor': 1984,
-  'Admin': 5150
-}
-
 function App() {
-
+  // TODO - add home page, login and register page, and dashboard.
   return (
     <Routes>
       <Route path="/" element={<Layout />}>
@@ -40,7 +34,7 @@ function App() {
         <Route path="*" element={<Missing />} />
       </Route>
     </Routes>
-  );
+  )
 }
 
-export default App;
+export default App
