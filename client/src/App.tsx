@@ -1,40 +1,21 @@
-import RequireAuth from './components/RequireAuth';
-import { Routes, Route } from 'react-router-dom';
+import RequireAuth from "./components/RequireAuth";
+import { ThemeProvider } from "./components/theme-provider";
+import { Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./components/Home";
 
 function App() {
   // TODO - add home page, login and register page, and dashboard.
   return (
-    <Routes>
-      <Route path="/" element={<Layout />}>
-        {/* public routes */}
-        <Route path="login" element={<Login />} />
-        <Route path="register" element={<Register />} />
-        <Route path="linkpage" element={<LinkPage />} />
-        <Route path="unauthorized" element={<Unauthorized />} />
-
-        {/* we want to protect these routes */}
-        <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          {/* public routes */}
           <Route path="/" element={<Home />} />
         </Route>
-
-        <Route element={<RequireAuth allowedRoles={[ROLES.Editor]} />}>
-          <Route path="editor" element={<Editor />} />
-        </Route>
-
-
-        <Route element={<RequireAuth allowedRoles={[ROLES.Admin]} />}>
-          <Route path="admin" element={<Admin />} />
-        </Route>
-
-        <Route element={<RequireAuth allowedRoles={[ROLES.Editor, ROLES.Admin]} />}>
-          <Route path="lounge" element={<Lounge />} />
-        </Route>
-
-        {/* catch all */}
-        <Route path="*" element={<Missing />} />
-      </Route>
-    </Routes>
-  )
+      </Routes>
+    </ThemeProvider>
+  );
 }
 
-export default App
+export default App;
