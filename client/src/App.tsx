@@ -3,6 +3,7 @@ import { ThemeProvider } from "./components/theme-provider";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
+import RegisterPage from "./components/RegisterPage";
 
 function App() {
   // TODO - add home page, login and register page, and dashboard.
@@ -12,6 +13,8 @@ function App() {
         <Route path="/" element={<Layout />}>
           {/* public routes */}
           <Route path="/" element={<Home />} />
+          <Route path="/register" element={<RegisterPage />} />
+          {/* private routes */}
         </Route>
       </Routes>
     </ThemeProvider>
