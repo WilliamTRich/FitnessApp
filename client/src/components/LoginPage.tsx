@@ -1,27 +1,27 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import RegisterForm from "./RegisterForm";
+import LoginForm from "./LoginForm";
 
-function RegisterPage() {
+function LoginPage() {
   return (
     <div className="flex flex-col w-full h-screen justify-center items-center">
-      <h1 className="text-4xl mb-4">Register</h1>
+      <h1 className="text-4xl mb-4">Login</h1>
       <Tabs defaultValue="client" className="w-[400px]">
         <TabsList className="grid w-full grid-cols-2">
           <TabsTrigger value="client">Client</TabsTrigger>
           <TabsTrigger value="trainer">Trainer</TabsTrigger>
         </TabsList>
         <TabsContent value="client">
-          <RegisterForm
+          <LoginForm
             title="Client"
-            description="Register as a Client, click 'Register as Client' to continue."
-            buttonText="Register as Client"
+            description="Login as a Client, click 'Login as Client' to continue."
+            buttonText="Login as Client"
           />
         </TabsContent>
         <TabsContent value="trainer">
-          <RegisterForm
+          <LoginForm
             title="Trainer"
-            description="Register as a Trainer, click 'Register as Trainer' to continue."
-            buttonText="Register as Trainer"
+            description="Login as a Trainer, click 'Login as Trainer' to continue."
+            buttonText="Login as Trainer"
           />
         </TabsContent>
       </Tabs>
@@ -29,4 +29,4 @@ function RegisterPage() {
   );
 }
 
-export default RegisterPage;
+export default LoginPage;

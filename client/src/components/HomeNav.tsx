@@ -1,4 +1,5 @@
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 function HomeNav() {
   return (
@@ -11,12 +12,16 @@ function HomeNav() {
         Fitness App
       </h1>
       <div className={"flex h-full w-1/3 items-center justify-center gap-4"}>
-        <Button variant={"default"} size={"lg"} className="text-xl">
-          Login
-        </Button>
-        <Button variant={"default"} size={"lg"} className="text-xl">
-          Register
-        </Button>
+        <Link to="/login">
+          <Button variant={"default"} size={"lg"} className="text-xl">
+            Login
+          </Button>
+        </Link>
+        <Link to="/register">
+          <Button variant={"default"} size={"lg"} className="text-xl">
+            Register
+          </Button>
+        </Link>
       </div>
     </div>
   );

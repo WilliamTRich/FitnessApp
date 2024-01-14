@@ -4,6 +4,7 @@ import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./components/Home";
 import RegisterPage from "./components/RegisterPage";
+import LoginPage from "./components/LoginPage";
 
 function App() {
   // TODO - add home page, login and register page, and dashboard.
@@ -14,6 +15,7 @@ function App() {
           {/* public routes */}
           <Route path="/" element={<Home />} />
           <Route path="/register" element={<RegisterPage />} />
+          <Route path="/login" element={<LoginPage />} />
           {/* private routes */}
         </Route>
       </Routes>
