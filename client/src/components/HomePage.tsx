@@ -1,6 +1,6 @@
 import HomeNav from "./HomeNav";
 
-function Home() {
+function HomePage() {
   return (
     <div className={"flex flex-col h-screen w-full"}>
       <HomeNav />
@@ -26,4 +26,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default HomePage;

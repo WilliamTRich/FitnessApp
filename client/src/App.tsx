@@ -2,9 +2,10 @@ import RequireAuth from "./components/RequireAuth";
 import { ThemeProvider } from "./components/theme-provider";
 import { Routes, Route } from "react-router-dom";
 import Layout from "./components/Layout";
-import Home from "./components/Home";
+import HomePage from "./components/HomePage";
 import RegisterPage from "./components/RegisterPage";
 import LoginPage from "./components/LoginPage";
+import DashboardPage from "./components/DashboardPage";
 
 function App() {
   // TODO - add home page, login and register page, and dashboard.
@@ -13,9 +14,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           {/* public routes */}
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomePage />} />
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
           {/* private routes */}
         </Route>
       </Routes>
