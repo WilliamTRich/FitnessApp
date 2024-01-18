@@ -1,6 +1,7 @@
 import Navbar from "./Navbar";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import DailyTask from "./DailyTask";
+import CalorieChart from "./CalorieChart";
 
 function DashboardPage() {
   return (
@@ -43,7 +44,10 @@ function DashboardPage() {
           />
         </ScrollArea>
         <div className="flex flex-col w-2/5 gap-6">
-          <div className="flex-1 border-2 rounded-md"></div>
+          <div className="flex-1 flex flex-col items-center justify-center border-2 rounded-md">
+            <h1 className="text-3xl font-md">Daily Calories</h1>
+            <CalorieChart />
+          </div>
           <div className="flex-1 border-2 rounded-md"></div>
         </div>
       </main>
