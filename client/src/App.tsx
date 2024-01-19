@@ -6,6 +6,7 @@ import HomePage from "./components/HomePage";
 import RegisterPage from "./components/RegisterPage";
 import LoginPage from "./components/LoginPage";
 import DashboardPage from "./components/DashboardPage";
+import MessagePage from "./components/MessagePage";
 
 function App() {
   // TODO - add home page, login and register page, and dashboard.
@@ -18,6 +19,7 @@ function App() {
           <Route path="/register" element={<RegisterPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/messages" element={<MessagePage />} />
           {/* private routes */}
         </Route>
       </Routes>

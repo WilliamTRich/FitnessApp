@@ -13,6 +13,8 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 
+//TODO - Add button functionality, add Logout functionality.
+
 function Navbar() {
   return (
     <div className="flex flex-col items-center justify-center h-screen w-1/6 bg-secondary">
