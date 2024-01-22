@@ -1,0 +1,9 @@
+@import "react-big-calendar/lib/sass/styles";
+
+.rbc-off-range-bg {
+  background: hsl(var(--secondary));
+}
+
+.rbc-today {
+  background: hsl(var(--secondary));
+}
