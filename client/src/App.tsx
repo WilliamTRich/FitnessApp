@@ -10,7 +10,6 @@ import MessagePage from "./components/MessagePage";
 import CalendarPage from "./components/CalendarPage";
 
 function App() {
-  // TODO - add home page, login and register page, and dashboard.
   return (
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <Routes>
