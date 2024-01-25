@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Navbar from "./Navbar";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import DailyTask from "./DailyTask";
@@ -7,6 +8,20 @@ import AddYearGoal from "./AddYearGoal";
 //TODO - Loop through daily tasks, fix calorie chart, loop through yearly goals.
 
 function DashboardPage() {
+  const [dailyTasks, setDailyTasks] = useState([
+    {
+      title: "Walk the Dogs",
+      description: "Need to walk the dogs on the trail outside of the house.",
+      time: "3:30-4:00 PM",
+    },
+    {
+      title: "Go for a Run",
+      description: "Need to go for a run in the park.",
+      time: "5:00-6:00 PM",
+    },
+    // Add more tasks as needed
+  ]);
+
   return (
     <div className="flex h-full w-full">
       <Navbar />
@@ -15,36 +30,13 @@ function DashboardPage() {
           <h1 className="flex flex-col w-full text-center text-2xl mb-4">
             Today's Tasks
           </h1>
-          <DailyTask
-            title="Walk the Dogs"
-            description="Need to walk the dogs on the trail outside of the house."
-            time="3:30-4:00 PM"
-          />
-          <DailyTask
-            title="Walk the Dogs"
-            description="Need to walk the dogs on the trail outside of the house."
-            time="3:30-4:00 PM"
-          />
-          <DailyTask
-            title="Walk the Dogs"
-            description="Need to walk the dogs on the trail outside of the house."
-            time="3:30-4:00 PM"
-          />
-          <DailyTask
-            title="Walk the Dogs"
-            description="Need to walk the dogs on the trail outside of the house."
-            time="3:30-4:00 PM"
-          />
-          <DailyTask
-            title="Walk the Dogs"
-            description="Need to walk the dogs on the trail outside of the house."
-            time="3:30-4:00 PM"
-          />
-          <DailyTask
-            title="Walk the Dogs"
-            description="Need to walk the dogs on the trail outside of the house."
-            time="3:30-4:00 PM"
-          />
+          {dailyTasks.map((task) => (
+            <DailyTask
+              title={task.title}
+              description={task.description}
+              time={task.time}
+            />
+          ))}
         </ScrollArea>
         <div className="flex flex-col w-2/5 gap-6">
           <div className="flex-1 flex flex-col items-center justify-center border-2 rounded-md">
